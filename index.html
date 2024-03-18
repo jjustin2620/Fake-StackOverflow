@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="shortcut icon" href="#">
+  <!--Should the tag be in the body?-->
+  <script type="module" src="./src/index.js"></script>
+  <title>Fake Stack Overflow</title>
+</head>
+<body>
+  <div id="header">
+    <h1 id="title">
+      Fake Stack Overflow
+    </h1>
+    <button id="dark-mode">
+      Dark Mode
+    </button>
+    <input id="searchbar" type="search" placeholder="Search...">
+  </div>
+
+  <div id="main">
+    <div id="sidebar">
+      <div id="leftnav">
+        <nav>
+            <ol id="question-tag-list">
+              <li class="pageButton-items">
+                <button id="show-questions" class="pageButtons">Questions</a>
+              </li>
+              <li class="pageButton-items">
+                <button id="show-tags" class="pageButtons">Tags</a>
+              </li>
+            </ol>
+        </nav>
+      </div>
+    </div>  
+
+    <div id="questions-section" class="section">
+      <div id="all-questions-page">
+        <div id="questions-header">
+          <h1 id="all-questions-text">All Questions</h1>
+          <div id="ask-questions-container">
+            <button class="ask-questions-button">Ask Question</button>
+          </div>
+        </div>
+        <div id="question-properties">
+          <h3 id="num-questions"></h3>
+          <div id="categories">
+            <button id="newest-cat" class="category-link">Newest</a>
+            <button id="active-cat"class="category-link">Active</a>
+            <button id="unanswered-cat" class="category-link">Unanswered</a>
+          </div>
+        </div>
+        <!--This is where questions go (THIS IS A COMMENT NODE)-->
+        <div id="questions-forum">
+          <h3 id="noQHeader" style="display: none;">No Questions Found.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="form-container" class="section hidden">
+      <form id="my-form">
+        <h2 class="form-header">
+          Question Title*
+        </h2>
+        <p class="form-caption">
+          Limit title to 100 characters or less
+        </p>
+        <textarea class="form-inputs" id="title-textbox" rows="2" cols="25" required placeholder="Enter title..."></textarea>
+        <span class="form-error-checks" id="ask-question-title-error" style="display: none; color: red;">Title cannot be empty or more than 100 characters!</span>
+        <h2 class="form-header">
+          Question Text*
+        </h2>
+        <p class="form-caption">
+          Add details*
+        </p>
+        <textarea class="form-inputs" id="add-details-textbox" placeholder="Add details..."></textarea>
+        <h2 class="form-header">
+          Tags*
+        </h2>
+        <p class="form-caption">
+          Add keywords separated by whitespace
+        </p>
+        <input class="form-inputs" id="tags-textbox" type="text" name="tags" placeholder="Enter tags...">
+        <span class="form-error-checks" id="ask-question-tags-error" style="display: none; color: red;">Cannot have more than 5 tags, 20 character tags, or be empty!</span>
+        <h2 class="form-header">
+          Username*
+        </h2>
+        <input class="form-inputs" id="username-text-box" type="text" name="username" placeholder="Enter your name...">
+        <span class="form-error-checks" id="ask-question-name-error" style="display: none; color: red;">Name cannot be empty!</span>
+        <button id="post-button" type="button">
+          Post Question
+        </button>
+        <p style="color: red; display: inline; margin-left: 50px">
+          *indicates mandatory fields
+        </p>
+      </form>
+    </div>
+
+    <div id="tags-section" class="section hidden">
+      <div id="top-tags-section">
+        <h3 id="num-tags">num questions</h3>
+        <h3>All Tags</h3>
+        <div class="ask-questions-container">
+          <button class="ask-questions-button">Ask Question</button>
+        </div>
+      </div>
+      <div id="tags"></div>
+    </div>
+    <div id="answers-page" class="section hidden">
+      <div id="display-question">
+        <div class="ansViews">
+          <p class="q-descriptions" id="ansQnAns"></p>
+          <p class="q-descriptions" id="ansQnViews"></p>
+        </div>
+        <div id="title-and-description">
+          <h3 id="answersPageQnTitle">Title</h3>
+          <p id="questionDescription">Problems...</p>
+        </div>
+        <div class="ask-questions-container">
+          <button class="ask-questions-button" id="ans-ask-button">Ask Question</button>
+          <div id="userAskandTime">
+            <span id="askedUser" class="askedUser">user...</span>
+            <span id="askedTime" class="askedInfo">time...</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="display-answers">
+        <button id="ansQuestionButton">Answer Question</button>
+      </div>
+    </div>
+    <div id="answerForm-container" class="section hidden">
+      <form id="answerForm">
+        <h2 id="ansForm-user">
+          Username*
+        </h2>
+        <input class="form-inputs" id="answer-username-textbox" type="text" name="username" placeholder="Enter your name...">
+        <span id="answerForm-name-check" class="answer-form-error-checks" style="display: none; color: red;">Username Required!</span>
+        <h2 id="ansForm-text">
+          Answer Text*
+        </h2>
+        <textarea class="form-inputs" id="answer-add-details-textbox" placeholder="Add details..."></textarea>
+        <span id="answerForm-textBox-check" class="answer-form-error-checks" style="display: none; color: red;">Text Required!</span>
+        <button id="postAnswer">
+          Post Answer
+        </button>
+        <p style="color: red; display: inline; width: fit-content;">
+          *indicates mandatory fields
+        </p>
+      </form>
+    </div>
+    
+  </div>
+</body>
+</html>
