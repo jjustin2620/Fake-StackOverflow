@@ -1,4 +1,4 @@
-This is a stack overflow clone using vanilla Javascript, HTML, and CSS.
+This is a stack overflow clone using vanilla Javascript, HTML, and CSS. It has the basic functionality of the app which includes searching for questions, sorting by categories, and posting and answering questions.
 
 Directions:
 1. Install Python3. (skip if already installed). 
